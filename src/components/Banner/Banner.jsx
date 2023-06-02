@@ -4,7 +4,7 @@ import './Banner.css'
 
 const Banner = () => {
   return (
-    <div>
+    <div className="text-center">
         
       <Carousel>
         <div className="banner">

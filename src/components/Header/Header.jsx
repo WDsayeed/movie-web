@@ -19,7 +19,7 @@ const Header = () => {
             
           </Nav>
           <Nav>
-            <Nav.Link className="text-white">Login</Nav.Link>
+            <Nav.Link className="text-white fw-semibold">Login</Nav.Link>
             
           </Nav>
         </Navbar.Collapse>

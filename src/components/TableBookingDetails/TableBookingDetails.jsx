@@ -8,17 +8,15 @@ const TableBookingDetails = () => {
     <Table striped bordered hover className="mt-5">
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Name</th>
+          <th>Seat Number</th>
+          <th>Ticket Number</th>
         </tr>
       </thead>
       <tbody>
         {getData.map((data, index) => (
           <tr key={index}>
             <td>{data.name}</td>
-            <td>{data.email}</td>
             <td>{data.seat}</td>
             <td>{data.ticketNumber}</td>
           </tr>

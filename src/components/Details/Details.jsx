@@ -25,7 +25,7 @@ const Details = () => {
       <div className="row" style={{ marginTop: "200px" }}>
         <div className="col-md-2"></div>
         <div className="col-md-8">
-          <div className="card mb-3">
+          <div className="card mb-3 shadow p-3 mb-5 bg-body-tertiary rounded border-0">
             <div className="row g-0">
               <div className="col-md-4">
                 <img
@@ -36,10 +36,13 @@ const Details = () => {
               </div>
               <div className="col-md-8 d-flex align-items-center">
                 <div className="card-body">
-                  <h5 className="card-title">{findData?.name}</h5>
+                  <h5 className="card-title text-uppercase">{findData?.name}</h5>
                   <p className="card-text">{findData?.summary}</p>
-                  <p className="card-text">
+                  <p className="">
+                    <span>Rating: </span>
+                 {findData?.rating?.average ? findData?.rating?.average : 'No rating'}
                   </p>
+                  <p>Language: {findData?.language}</p>
                   <div  className="w-100 d-flex justify-content-end">
                   <Link to={`/booking/${findData?.id}`}>
                     <Button className="px-5 border-0 rounded-0" style={{backgroundColor:'#443C68'}}>Book Ticket</Button>

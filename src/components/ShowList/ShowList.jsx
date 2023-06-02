@@ -18,22 +18,21 @@ const ShowList = () => {
   return (
 
 
-    <Row xs={1} md={3} lg={5} className="g-4 w-100 h-100">
+    <Row xs={1} md={3} lg={4} className="g-5 w-100 h-100">
       {shows.map(show => (
         <Col key={show.id}>
-          <Card>
+          <Card className="shadow p-3 mb-5 bg-body-tertiary rounded border-0">
            <div style={{height:'300px'}} className="w-100">
            <Card.Img className="w-100 h-100" variant="top" src={show.image.original} />
            </div>
             <Card.Body>
-              <Card.Title>{show.name}</Card.Title>
-              {/* <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text> */}
+              <div className="d-flex justify-content-between">
+              <Card.Title className="text-uppercase">{show.name}</Card.Title>
+              <small>{show.language}</small>
+              </div>
+  
               <Link to={`/details/${show.id}`}>            
-              <Button className="px-4 rounded-0" style={{backgroundColor:'#443C68'}} variant="primary">Details</Button>
+              <Button className="w-100 mt-3 border-0 rounded-0" style={{backgroundColor:'#443C68'}} variant="primary">Details</Button>
              </Link>
             </Card.Body>
           </Card>

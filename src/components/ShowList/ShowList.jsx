@@ -23,7 +23,7 @@ const ShowList = () => {
         <Col key={show.id}>
           <Card>
            <div style={{height:'300px'}} className="w-100">
-           <Card.Img className="w-full h-full" variant="top" src={show.image.original} />
+           <Card.Img className="w-100 h-100" variant="top" src={show.image.original} />
            </div>
             <Card.Body>
               <Card.Title>{show.name}</Card.Title>
@@ -33,7 +33,7 @@ const ShowList = () => {
                 longer.
               </Card.Text> */}
               <Link to={`/details/${show.id}`}>            
-              <Button variant="primary">Details</Button>
+              <Button className="px-4 rounded-0" style={{backgroundColor:'#443C68'}} variant="primary">Details</Button>
              </Link>
             </Card.Body>
           </Card>

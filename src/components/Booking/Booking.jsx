@@ -75,13 +75,7 @@ const Booking = () => {
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Control type="number" name="seat" placeholder="seat number" />
         </Form.Group>
-        {/* <Form.Select aria-label="Default select example">
-          <option>Select any movie</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </Form.Select> */}
-        <input className="btn btn-info" type="submit" value="Ticket Book" />
+        <input style={{backgroundColor:'#443C68'}} className="btn btn-info px-4 text-white border-0 rounded-0" type="submit" value="Ticket Book" />
       </Form>
       <TableBookingDetails></TableBookingDetails>
     </div>

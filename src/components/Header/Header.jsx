@@ -1,32 +1,26 @@
-import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Container, Nav,  Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="" variant="">
+    <Navbar className="py-3" collapseOnSelect expand="lg" style={{backgroundColor:'#0B2447'}} variant="">
       <Container>
-        <Navbar.Brand href="#home">Movie <span className="">Web</span> </Navbar.Brand>
+        <Navbar.Brand className="text-white fw-bolder fs-3">Movie <span style={{}}>Web</span> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Nav className="mx-auto text-white">
+            <Link to='/' className="nav-link text-white fw-semibold" href="#features">Home</Link>
+            <Nav.Link className="text-white fw-semibold" href="#features">Cinema Movies</Nav.Link>
+            <Nav.Link className="text-white fw-semibold" href="#pricing">Tv Series</Nav.Link>
+            <Nav.Link className="text-white fw-semibold" href="#pricing">Cartoon</Nav.Link>
+            <Nav.Link className="text-white fw-semibold" href="#pricing">Anime</Nav.Link>
+            
+            
+            
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+            <Nav.Link className="text-white">Login</Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

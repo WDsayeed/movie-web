@@ -11,7 +11,7 @@ const Booking = () => {
     fetch("https://api.tvmaze.com/search/shows?q=all")
       .then((res) => res.json())
       .then((data) => {
-        const showData = data.map((shData) => shData.show);
+        const showData = data?.map((shData) => shData.show);
         setBookingData(showData);
       });
   }, []);

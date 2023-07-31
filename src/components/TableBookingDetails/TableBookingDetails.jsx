@@ -14,7 +14,7 @@ const TableBookingDetails = () => {
         </tr>
       </thead>
       <tbody>
-        {getData.map((data, index) => (
+        {getData?.map((data, index) => (
           <tr key={index}>
             <td>{data.name}</td>
             <td>{data.seat}</td>
